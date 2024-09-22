@@ -16,9 +16,9 @@ document.getElementById('get-started').addEventListener('click', function () {
 
     const div = document.createElement('div');
     div.innerHTML = `
-    <div class="mt-10 shadow-xl bg-white px-20 border">
+    <div class="mt-10 shadow-xl bg-white px-20 border rounded-xl text-left pt-10">
      <p class="font-bold text-2xl">${donationAmount} Taka is Donated for famine-2024at Feni, Bangladesh</p>
-     <p class="text-xl  my-5 p-5"> Date: ${new Date().toLocaleDateString()},${new Date().toLocaleTimeString()}.${new Date().toLocaleString()}</p>
+    <p class="text-xl  my-5 p-2"> Date:${new Date().toUTCString()}.${new Date().toLocaleTimeString()}</p>
     </div>
     `
     const historyList = document.getElementById('history-list');
@@ -41,6 +41,18 @@ document.getElementById('get-started-2').addEventListener('click', function () {
     const totalAmount = document.getElementById('total-amount').innerText;
     const increage = totalAmount - donationTk;
     document.getElementById('total-amount').innerHTML = increage;
+
+
+    const div = document.createElement('div');
+    div.innerHTML = `
+    <div class="mt-10 shadow-xl bg-white px-20 border rounded-xl text-left pt-10">
+     <p class="font-bold text-2xl">${donationTk} Donate for Flood Relief in Feni,Bangladesh</p>
+     <p class="text-xl  my-5 p-2"> Date:${new Date().toUTCString()}.${new Date().toLocaleTimeString()}</p>
+    </div>
+    `
+    const historyList = document.getElementById('history-list');
+    historyList.insertBefore(div, historyList.firstChild);
+
 })
 
 
@@ -60,6 +72,17 @@ document.getElementById('get-started3').addEventListener('click', function () {
     const totalAmount = document.getElementById('total-amount').innerText;
     const increage = totalAmount - donationInputValue;
     document.getElementById('total-amount').innerHTML = increage;
+
+
+    const div = document.createElement('div');
+    div.innerHTML = `
+    <div class="mt-10 shadow-xl bg-white px-20 border rounded-xl text-left pt-10">
+     <p class="font-bold text-2xl">${donationInputValue} Aid for Injured in the Quota Movement</p>
+     <p class="text-xl  my-5 p-2"> Date:${new Date().toUTCString()}.${new Date().toLocaleTimeString()}</p>
+    </div>
+    `
+    const historyList = document.getElementById('history-list');
+    historyList.insertBefore(div, historyList.firstChild);
 })
 
 // history tab
