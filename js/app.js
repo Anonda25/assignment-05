@@ -1,6 +1,4 @@
 
-
-
 document.getElementById('get-started').addEventListener('click', function () {
     const donationAmount = parseFloat(document.getElementById('donation-amount').value);
     if (donationAmount <= 0 || isNaN(donationAmount)) {
@@ -43,19 +41,6 @@ document.getElementById('get-started-2').addEventListener('click', function () {
     const totalAmount = document.getElementById('total-amount').innerText;
     const increage = totalAmount - donationTk;
     document.getElementById('total-amount').innerHTML = increage;
-
-    // // historyList
-    // const div = document.createElement('div');
-    // div.innerHTML = `
-    // <div class="mt-10 shadow-xl bg-white px-20 border">
-    //  <p class="font-bold text-2xl">${donationAmount} Taka is Donated for famine-2024at Feni, Bangladesh</p>
-    //  <p class="text-xl  my-5 p-5"> Date: ${new Date().toLocaleDateString()},${new Date().toLocaleTimeString()}.${new Date().toLocaleString()}</p>
-    // </div>
-    // `
-    // const historyList = document.getElementById('history-list-to');
-    // historyList.insertBefore(div, historyList.firstChild);
-
-
 })
 
 
@@ -109,5 +94,5 @@ donasationTab.addEventListener('click', function () {
 
 // const relodeBtn = document.getElementById('relod-btn');
 // relodeBtn.addEventListener('click', function () {
-//     window.location.reload();
+//     window.location.replace();
 // })
