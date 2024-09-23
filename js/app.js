@@ -8,7 +8,7 @@ document.getElementById('get-started').addEventListener('click', function () {
     const inputAmount = document.getElementById('input-amount');
     inputAmount.innerText = donationAmount;
 
-    const totalAmount = document.getElementById('total-amount').innerText;
+    const totalAmount = getElementTotalDonationById('total-amount');
     const increage = totalAmount - donationAmount;
 
     document.getElementById('total-amount').innerHTML = increage;
@@ -38,7 +38,8 @@ document.getElementById('get-started-2').addEventListener('click', function () {
 
     document.getElementById('donation-tk-input').innerHTML = totalAmounts;
 
-    const totalAmount = document.getElementById('total-amount').innerText;
+    // const totalAmount = document.getElementById('total-amount').innerText;
+    const totalAmount = getElementTotalDonationById('total-amount');
     const increage = totalAmount - donationTk;
     document.getElementById('total-amount').innerHTML = increage;
 
@@ -70,7 +71,8 @@ document.getElementById('get-started3').addEventListener('click', function () {
 
     document.getElementById('input-amount-quota').innerHTML = totalDonastion;
 
-    const totalAmount = document.getElementById('total-amount').innerText;
+    // const totalAmount = document.getElementById('total-amount').innerText;
+    const totalAmount = getElementTotalDonationById('total-amount');
     const increage = totalAmount - donationInputValue;
     document.getElementById('total-amount').innerHTML = increage;
 
@@ -114,5 +116,4 @@ donasationTab.addEventListener('click', function () {
     document.getElementById('history').classList.add('hidden');
     document.getElementById('help-section').classList.remove('hidden');
 })
-
 
