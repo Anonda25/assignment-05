@@ -1,9 +1,9 @@
 
 document.getElementById('get-started').addEventListener('click', function () {
-    const donationAmount = parseFloat(document.getElementById('donation-amount').value);
+    const donationAmount = getElementInputValueById('donation-amount');
     if (donationAmount <= 0 || isNaN(donationAmount)) {
-        return alert(' type number');
-    }
+        return alert(' invalid Donated Amount');
+    };
 
     const inputAmount = document.getElementById('input-amount');
     inputAmount.innerText = donationAmount;
@@ -12,7 +12,6 @@ document.getElementById('get-started').addEventListener('click', function () {
     const increage = totalAmount - donationAmount;
 
     document.getElementById('total-amount').innerHTML = increage;
-
 
     const div = document.createElement('div');
     div.innerHTML = `
@@ -28,12 +27,13 @@ document.getElementById('get-started').addEventListener('click', function () {
 })
 
 document.getElementById('get-started-2').addEventListener('click', function () {
-    const donationTk = parseFloat(document.getElementById('amount-donation-tk').value);
+    const donationTk = getElementInputValueById('amount-donation-tk');
 
     if (donationTk <= 0 || isNaN(donationTk)) {
-        return alert(' type number');
+        return alert('invalid Donated Amount');
     }
-    const totalDonastion = parseFloat(document.getElementById('donation-tk-input').innerText);
+    // const totalDonastion = parseFloat(document.getElementById('donation-tk-input').innerText);
+    const totalDonastion = getElementTotalDonationById('donation-tk-input');
     const totalAmounts = totalDonastion + donationTk;
 
     document.getElementById('donation-tk-input').innerHTML = totalAmounts;
@@ -61,10 +61,11 @@ document.getElementById('get-started3').addEventListener('click', function () {
     const donationInputValue = parseFloat(document.getElementById('donation-amount-input').value);
 
     if (donationInputValue <= 0 || isNaN(donationInputValue)) {
-        return alert(' type a number')
+        return alert('invalid Donated Amount')
     }
 
-    const inputAmountQuota = parseFloat(document.getElementById('input-amount-quota').innerText);
+    // const inputAmountQuota = parseFloat(document.getElementById('input-amount-quota').innerText);
+    const inputAmountQuota = getElementTotalDonationById('input-amount-quota');
     const totalDonastion = donationInputValue + inputAmountQuota;
 
     document.getElementById('input-amount-quota').innerHTML = totalDonastion;
@@ -115,7 +116,3 @@ donasationTab.addEventListener('click', function () {
 })
 
 
-// const relodeBtn = document.getElementById('relod-btn');
-// relodeBtn.addEventListener('click', function () {
-//     window.location.replace();
-// })
