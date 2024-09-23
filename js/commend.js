@@ -1,5 +1,5 @@
 function getElementInputValueById(id) {
-    const inputValue = parseFloat(document.getElementById(id).value).toFixed(2);
+    const inputValue = parseFloat(document.getElementById(id).value);
     return inputValue;
 };
 

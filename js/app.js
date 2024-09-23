@@ -28,6 +28,7 @@ document.getElementById('get-started').addEventListener('click', function () {
 
 document.getElementById('get-started-2').addEventListener('click', function () {
     const donationTk = getElementInputValueById('amount-donation-tk');
+    console.log(donationTk);
 
     if (donationTk <= 0 || isNaN(donationTk)) {
         return alert('invalid Donated Amount');
